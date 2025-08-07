@@ -5,8 +5,11 @@ maintainer:     Josep Bigorra <jjbigorra@gmail.com>
 build-type:     Simple
 license:        LGPL-3
 license-file: COPYING
-synopsis: Data validation in Haskell that is composable, made easy and clean.              
-description:    See README at https://codeberg.org/jjba23/keuringsdienst
+synopsis: Data validation in Haskell: composable, easy and clean.              
+description:
+  Validation rules should be expressive and serve as documentation of your data.
+  Based on Semigroup and Monoid operations, this makes validation rules that are easy to write, read, compose and maintain.
+  See README at https://codeberg.org/jjba23/keuringsdienst.
 homepage: https://codeberg.org/jjba23/keuringsdienst
          
 library
@@ -54,9 +57,9 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints
   build-depends:
     base < 5
-    , aeson
-    , containers
-    , text
+    , aeson < 3
+    , containers < 1
+    , text < 3
   default-language: GHC2021
 
 test-suite keuringsdienst-spec
@@ -107,9 +110,9 @@ test-suite keuringsdienst-spec
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints
   build-depends:
       base < 5
-    , aeson
-    , containers
-    , text
+    , aeson < 3
+    , containers < 1
+    , text < 3
     , HUnit
     , keuringsdienst
   default-language: GHC2021
