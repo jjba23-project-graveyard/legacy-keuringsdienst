@@ -22,7 +22,6 @@
             stack
             deadnix
             jq
-            awscli2
           ];
         };
       });
