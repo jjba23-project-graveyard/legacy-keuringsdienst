@@ -6,7 +6,7 @@
 
 If you know, you know. Data validation in Haskell that is composable, made easy and clean.
 
-See [[https://hackage.haskell.org/package/keuringsdienst][the keuringsdienst package on Hackage for technical Haskell Haddock documentation]]. Licensed under the GNU General Public License v3 or later.
+See [[https://hackage.haskell.org/package/keuringsdienst][the keuringsdienst package on Hackage for technical Haskell Haddock documentation]]. Licensed under the GNU Lesser General Public License v3 or later.
 
 Data validation rules that are easy to write and serve as documentation of your data as well.
 
