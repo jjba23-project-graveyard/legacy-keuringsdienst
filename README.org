@@ -1,19 +1,17 @@
+#+title: Keuringsdienst (van Waarde)
 #+author: Josep Bigorra
 #+email: jjbigorra@gmail.com
-#+options: toc:nil
+#+options: num:nil
 
-* Keuringsdienst (van Waarde)
+If you know, you know. /Data validation in Haskell that is composable, made easy and clean./
 
-If you know, you know. Data validation in Haskell that is composable, made easy and clean.
+[[https://jointhefreeworld.org/ggg/dist/haskell-ghc910.svg]]
 
 See [[https://hackage.haskell.org/package/keuringsdienst][the keuringsdienst package on Hackage for technical Haskell Haddock documentation]]. Licensed under the GNU Lesser General Public License v3 or later.
 
-Data validation rules that are easy to write and serve as documentation of your data as well.
+Validation rules should be easy to write and serve as documentation of your data as well. Therefore, data validations *SHOULD* live next to your data models.
 
-Therefore, data validations *SHOULD* live next to your data models.
-
-
-** Context and motivation
+* Context and motivation
 
 There exist many data validation packages, in Haskell and other languages, but so far I have never found something that was flexible but powerful enough for my needs.
 
@@ -46,7 +44,7 @@ Imagine a simple data model (record) for a music artist:
   deriving (Eq, Show, Generic)
 #+end_src
 
-** Defining validations
+* Defining validations
       
 Of course for all this to work, you need some imports:
 #+begin_src haskell
@@ -67,7 +65,7 @@ You can define a validation function for ~Artist~ by composing validation result
       <> (spotifyUrl x) |??| isNonEmptyText
 #+end_src
 
-** What is a ValidationResult
+* What is a ValidationResult
 
 #+begin_src haskell
   type ErrMsg = Text
@@ -96,10 +94,34 @@ If you like ~Optics~ and lenses as I do, you are fully free to use it:
 #+end_src
 
 
-** Running the tests
+* Running the tests
 
 #+begin_src bash
-make unit-test
+make test
 #+end_src
 
 
+---------
+
+* Licensing
+
+keuringsdienst and all of its source code are free software, licensed under the GNU Lesser General Public License v3 (or newer at your convenience).
+
+https://www.gnu.org/licenses/lgpl-3.0.html
+
+The documentation and examples, including this document, which are provided with keuringsdienst, are all licensed under the GNU Free Documentation License v1.3 (or newer at your convenience).
+
+https://www.gnu.org/licenses/fdl-1.3.html
+
+
+-------------
+
+* Code of conduct
+
+This project adheres to the jointhefreeworld code of conduct. Find it here:
+
+https://jointhefreeworld.org/blog/articles/personal/jointhefreeworld-code-of-conduct/index.html
+
+In summary, we foster an inclusive, respectful, and cooperative environment for all contributors and users of this free software project. Inspired by the ideals of the GNU Project, we strive to uphold freedom, equality, and community as guiding principles. We believe that collaboration in a community of mutual respect is essential to creating excellent free software.
+
+-------
