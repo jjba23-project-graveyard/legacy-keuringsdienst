@@ -96,8 +96,10 @@ If you like ~Optics~ and lenses as I do, you are fully free to use it:
 
 * Running the tests
 
+The project's automation is done using [[https://codeberg.org/jjba23/maak][Maak]] , check the ~maak.scm~ file.
+
 #+begin_src bash
-make test
+maak test
 #+end_src
 
 
